@@ -2,7 +2,7 @@
 #include "iostream"
 #include "algorithm"
 
-Fraction operator+(Fraction x1, Fraction x2) {
+Fraction operator+(Fraction const & f1, Fraction const & f) {
   return Fraction(0,1);
 }
 
@@ -10,7 +10,7 @@ Fraction Fraction::operator+(float x) {
      return Fraction(0,1);
 }
 
-Fraction operator-(Fraction& plus, Fraction& minus) {
+Fraction operator-(Fraction const & f1, Fraction const & f) {
   return Fraction(0,1);
 }
 
@@ -18,32 +18,32 @@ Fraction Fraction::operator-(float x) {
      return Fraction(0,1);
 }
 
-Fraction operator-(float x, Fraction frac) {
+Fraction operator-(float x, Fraction const & f) {
      return Fraction(0,1);
 }
 
-Fraction operator*(Fraction &f1, Fraction &f2) {
+Fraction operator*(Fraction const & f1, Fraction const & f) {
  return Fraction(0,1);
 }
 
 
 
-Fraction operator*(float x,Fraction f) {
+Fraction operator*(float x,Fraction const & f) {
   return Fraction(0,1);
 }
 
-Fraction operator*(Fraction f, float x) {
+Fraction operator*(Fraction const & f, float x) {
      return Fraction(0,1);
 }
 /// divied
-Fraction Fraction::operator/(Fraction &other) const {
+Fraction Fraction::operator/(Fraction const & f) const {
   return Fraction(0,1);
 }
-Fraction operator/(float x, Fraction f ) {
+Fraction operator/(float x, Fraction const & f) {
  return Fraction(0,1);
 }
 
-Fraction operator/(Fraction f, float x ) {
+Fraction operator/(Fraction const & f, float x ) {
     return Fraction(0,1);
 }
 /// < , <= , >= , >
@@ -103,11 +103,11 @@ Fraction Fraction::operator--(int) {
     return Fraction(0,0);
 }
 
-ostream &operator<<(ostream &ostream, Fraction f) {
+ostream &operator<<(ostream &ostream, Fraction const & f) {
     return ostream;
 }
 
-void operator>>(istream &in, Fraction f) {
+void operator>>(istream &in, Fraction const & f) {
          
 }
 

@@ -33,19 +33,19 @@ public:
     }
     ///plus
     Fraction operator+(float x);
-    friend Fraction operator+(Fraction x1, Fraction x2);
+    friend Fraction operator+(Fraction const & x1, Fraction const & x2);
     /// minus
-    friend Fraction operator-(Fraction& plus, Fraction& minus);
+    friend Fraction operator-(Fraction const & plus, Fraction const &minus);
     Fraction operator-(float x);
-    friend  Fraction operator-(float  x , Fraction frac);
+    friend  Fraction operator-(float  x , Fraction const & frac);
     ///mul
-    friend Fraction operator*(Fraction& f1, Fraction& f2);
-    friend Fraction operator *(float , Fraction );
-    friend Fraction operator *(Fraction , float );
+    friend Fraction operator*(Fraction const &f1, Fraction const & f2);
+    friend Fraction operator *(float , Fraction const & );
+    friend Fraction operator *(Fraction const &, float );
    ///divide
-    Fraction operator/(Fraction& other) const;
-    friend Fraction operator /(float , Fraction );
-    friend Fraction operator /(Fraction , float );
+    Fraction operator/(Fraction const & other) const;
+    friend Fraction operator /(float , Fraction const & );
+    friend Fraction operator /(Fraction const & , float );
     /// < , <=  , > , >=
     ///<=
     bool operator <= (Fraction const & other) const;
@@ -67,9 +67,9 @@ public:
     Fraction operator ++ (int);
     Fraction operator --(int);
     /// <<
-    friend ostream& operator << (ostream& o , Fraction f);
+    friend ostream& operator << (ostream& o , Fraction const & f);
     /// >>
-    friend void operator >> (istream & o , Fraction f);
+    friend void operator >> (istream & o , Fraction const & f);
 
     int getDenominator() const {
         return this->denominator;
